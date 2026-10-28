@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PA3 – AR Hit-Testing</title>
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js" } }
+  </script>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #111; color: #eee; }
+    header { padding: 12px 16px; }
+    h1 { font-size: 18px; margin: 0 0 6px; }
+    #fallback { background: #b00020; color: #fff; padding: 10px; border-radius: 6px; }
+    #overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px;
+               background: rgba(0,0,0,0.6); color: #fff; font-size: 14px; }
+    #status { white-space: pre-line; margin-bottom: 8px; }
+    #tracking { color: #ffcc00; font-weight: bold; }
+    button { font-size: 16px; padding: 10px 16px; margin-right: 8px; border-radius: 6px; border: 0; }
+    #btn { background: #2e7d32; color: #fff; }
+    #clear { background: #555; color: #fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">AR product preview</h1>
+    <p id="fallback" hidden></p>
+  </header>
+  <div id="overlay">
+    <div id="tracking"></div>
+    <div id="status"></div>
+    <button id="btn" hidden>START AR</button>
+    <button id="clear">Clear</button>
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
